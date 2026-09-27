@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Shop — Fruitful</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="nav-slot"></div>
+
+<main>
+  <section class="wrap center" style="padding-bottom:24px;">
+    <span class="eyebrow">Shop</span>
+    <h2>Compare the three lines</h2>
+    <p class="lede center">Every line shares the same daily core four — Vitamin C, D3, a multivitamin, and elderberry — plus four nutrients tuned to that line.</p>
+  </section>
+
+  <section class="wrap">
+    <div class="lines-grid">
+      <div class="line-card women">
+        <div class="line-banner">
+          <div class="line-wordmark">Fruitful</div>
+          Women's
+          <div class="line-sub">biotin · folate · calcium</div>
+        </div>
+        <div class="line-body">
+          <p>Biotin, folic acid, and calcium alongside the daily core four. No iron — see FAQ for why.</p>
+          <div class="gummy-grid" data-gummy-grid="women"></div>
+          <div class="line-caption">One pouch, once a day</div>
+          <a href="product-women.html" class="btn btn-outline" style="margin-top:18px;">View Women's</a>
+        </div>
+      </div>
+      <div class="line-card men">
+        <div class="line-banner">
+          <div class="line-wordmark">Fruitful</div>
+          Men's
+          <div class="line-sub">zinc · magnesium · turmeric</div>
+        </div>
+        <div class="line-body">
+          <p>Zinc, magnesium, and turmeric alongside the daily core four.</p>
+          <div class="gummy-grid" data-gummy-grid="men"></div>
+          <div class="line-caption">One pouch, once a day</div>
+          <a href="product-men.html" class="btn btn-outline" style="margin-top:18px;">View Men's</a>
+        </div>
+      </div>
+      <div class="line-card kids">
+        <div class="line-banner">
+          <div class="line-wordmark">Fruitful</div>
+          Kids
+          <div class="line-sub">for the fun of it</div>
+        </div>
+        <div class="line-body">
+          <p>Vitamin A, calcium, zinc, and omega-3 — no iron, kept fun and safe.</p>
+          <div class="gummy-grid" data-gummy-grid="kids"></div>
+          <div class="line-caption">One pouch, once a day</div>
+          <a href="product-kids.html" class="btn btn-outline" style="margin-top:18px;">View Kids</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="footer-slot"></div>
+
+<script src="js/nutrients.js"></script>
+<script src="js/app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("[data-gummy-grid]").forEach(el => {
+      renderGummyGrid(el, el.dataset.gummyGrid);
+    });
+  });
+</script>
+</body>
+</html>

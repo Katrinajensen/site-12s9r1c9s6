@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fruitful Women's</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="nav-slot"></div>
+
+<main>
+  <section class="wrap">
+    <div class="product-hero">
+      <div>
+        <span class="product-tag tag-women">Women's</span>
+        <h1>Biotin, folate, and calcium — built for her daily routine.</h1>
+        <p class="lede">The same fructose-free 8-gummy pack, tuned with biotin for hair/skin/nails, folic acid, and calcium. No added iron — by design, so the pack never needs child-resistant packaging.</p>
+        <a href="index.html#waitlist" class="btn btn-cta">Join the Waitlist</a>
+      </div>
+      <div>
+        <div class="hero-photo"><img src="images/hero-women.jpg" alt="Woman smiling while cooking a healthy meal"></div>
+        <p class="photo-credit">Photo: Jason Briscoe on <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <span class="eyebrow">What's inside</span>
+    <h2>8 gummies, one pouch, once a day</h2>
+    <div class="line-card women pkg-mock">
+      <div class="line-banner">
+        <div class="line-wordmark">Fruitful</div>
+        Women's
+        <div class="line-sub">biotin · folate · calcium</div>
+      </div>
+      <div class="line-body">
+        <div class="gummy-grid" data-gummy-grid="women"></div>
+        <div class="line-caption">One pouch, once a day</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <span class="eyebrow">Label</span>
+    <h2>Supplement Facts</h2>
+    <div class="supp-facts" style="margin-top:20px;">
+      <h4>Supplement Facts</h4>
+      <p style="margin:4px 0 0; font-size:12px; color:var(--ink-soft);">Serving size: 1 pouch (8 gummies)</p>
+      <table>
+        <tr><td>Vitamin C</td><td>—</td></tr>
+        <tr><td>Vitamin D3</td><td>—</td></tr>
+        <tr><td>Multivitamin blend</td><td>—</td></tr>
+        <tr><td>Elderberry extract</td><td>—</td></tr>
+        <tr><td>Biotin</td><td>—</td></tr>
+        <tr><td>Folic Acid</td><td>—</td></tr>
+        <tr><td>Calcium</td><td>—</td></tr>
+        <tr><td>Vitamin B12</td><td>—</td></tr>
+      </table>
+      <p class="note">Placeholder label — exact amounts and % Daily Value will be set with a formulator before this is a real product. No iron included.</p>
+    </div>
+  </section>
+</main>
+
+<div id="footer-slot"></div>
+
+<script src="js/nutrients.js"></script>
+<script src="js/app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("[data-gummy-grid]").forEach(el => {
+      renderGummyGrid(el, el.dataset.gummyGrid);
+    });
+  });
+</script>
+</body>
+</html>
